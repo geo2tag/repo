@@ -1,0 +1,10 @@
+Origin: Geo2tag.org
+Label: geo2tag
+Codename: geo2tag
+Suite: testing
+Architectures: i386 amd64
+Components: extras
+Description: Geo-tagging and LBS platform
+SignWith: 9E46A744
+
+
