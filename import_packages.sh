@@ -1,6 +1,7 @@
 #!/bin/sh
 
 INCOMING=`pwd`/incoming
+DISTR=testing
 
 #
 # Make sure we're in the apt/ directory
@@ -33,7 +34,7 @@ fi
 for i in $INCOMING/*.changes; do
 
   # Import package to 'sarge' distribution.
-  reprepro -Vb . include sarge $i
+  reprepro -Vb . include ${DISTR} $i
 
   # Delete the referenced files
   sed '1,/Files:/d' $i | sed '/BEGIN PGP SIGNATURE/,$d' \
