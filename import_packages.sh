@@ -106,4 +106,5 @@ done
 
 
 echo "### State after update: ###"
-reprepo list 
+reprepro list 
+
