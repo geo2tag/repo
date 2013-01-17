@@ -8,8 +8,8 @@ echo "Running import on `hostname`"
 echo "incoling=${INCOMING}"
 echo "= Incoming content is="
 ls -la ${INCOMING}
-echo "### State before update: ###"
-reprepo list 
+
+BEFORE=`reprepro list testing`
 
 #
 # Make sure we're in the apt/ directory
@@ -105,6 +105,9 @@ echo $i
 done
 
 
-echo "### State after update: ###"
-reprepro list 
+echo "RESULT:"
+AFTER=`reprepro list testing`
+
+echo "before: ${BEFORE}"
+echo " after: ${AFTER}"
 
