@@ -2,7 +2,7 @@ Origin: Geo2tag.org
 Label: geo2tag
 Codename: geo2tag
 Suite: testing
-Architectures: amd64
+Architectures: amd64 i386
 Components: main
 Description: Geo-tagging and LBS platform
 SignWith: 38B1DDB7
