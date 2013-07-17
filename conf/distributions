@@ -3,8 +3,8 @@ Label: geo2tag
 Codename: geo2tag
 Suite: testing
 Architectures: amd64 i386
-Components: main
+Components: testing stable
 Description: Geo-tagging and LBS platform
-SignWith: 38B1DDB7
+SignWith: 0F160056
 
 

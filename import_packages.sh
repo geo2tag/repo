@@ -1,8 +1,15 @@
 #!/bin/sh
 
-INCOMING=`pwd`/incoming
+if [ $# -ne "1" ]
+then
+  echo "Usage: ./import_packages.sh [testing|stable]"
+  exit 1
+fi
+
 DISTR=testing
 
+SUBREPO=$1
+INCOMING=`pwd`/incoming_${SUBREPO}
 
 echo "Running import on `hostname`"
 echo "incoling=${INCOMING}"
@@ -45,7 +52,7 @@ for i in $INCOMING/*.deb; do
 echo $i
 
   # Import package to 'sarge' distribution.
-  reprepro  --ignore=wrongdistribution  -Vb . includedeb ${DISTR} $i
+  reprepro  --ignore=wrongdistribution -C ${SUBREPO}  -Vb . includedeb ${DISTR} $i
 	echo $i
 
   # Delete the referenced files
@@ -80,7 +87,7 @@ for i in $INCOMING/*.changes; do
 echo $i
 
   # Import package to 'sarge' distribution.
-  reprepro  --ignore=wrongdistribution  -Vb . include ${DISTR} $i
+  reprepro  --ignore=wrongdistribution  -C ${SUBREPO} -Vb . include ${DISTR} $i
 	echo $i
 
   # Delete the referenced files
