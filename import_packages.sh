@@ -6,6 +6,8 @@ then
   exit 1
 fi
 
+cd /opt/repo/
+
 DISTR=testing
 
 SUBREPO=$1
