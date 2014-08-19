@@ -9,7 +9,8 @@ For installing geo2tag do next steps:
 <li>Add next line into /etc/apt/sources.list file
    <p><b>deb http://download.geo2tag.org/ geo2tag {testing, stable}</b>
 </li>
-<li>Run <i>sudo apt-key adv --keyserver keys.gnupg.net  --recv-keys 8A4725A20F160056</i></li>
+<li>Run <i>sudo wget  http://download.geo2tag.org/geo2tag.pub</i></li>
+<li>Run <i>sudo apt-key add geo2tag.pub </i> </li>
 <li>Run <i>sudo apt-get update</i></li>
 <li>Check by search package "geo2tag": <i>apt-cache search geo2tag</i></li>
 <li>Use <i>sudo apt-get install</i> for installing required components</li>
